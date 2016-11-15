@@ -15,4 +15,6 @@ Given below is a screen shot for the the ineractive topic modelling for the amaz
 For instance, in the topic modelling, for topic 2 at a relavance metric of o.49 the top words in the topic are pedal, distortion, delay, boss, tone, boost, effect, overdrive etc. 
 These words feature in other topics like, 1, 9, 8, 15, 3, 5 etc.
 Pedal has featured approximately 2,500 times and 2100 times in topic 2 itself.
+
+The below URL link shows the interactive topic modelling for this particular data set.
 https://rawgit.com/pavitra11/musical-instruments-product-reviews/master/index.html
