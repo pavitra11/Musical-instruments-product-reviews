@@ -17,6 +17,7 @@ Using the R package to fit the model
 ![ScreenShot](https://cloud.githubusercontent.com/assets/22182351/20322952/efd7be3e-ab48-11e6-915d-10bff18ab2ee.png)
 
 Visualizing the fit model
+![ScreenShot](https://cloud.githubusercontent.com/assets/22182351/20323021/2e459326-ab49-11e6-9a89-5ff25863a457.png)
 
 Given below is a screen shot for the the ineractive topic modelling for the amazon reviews for various musical instruments.
 ![ScreenShot](https://cloud.githubusercontent.com/assets/22182351/20316792/722da244-ab31-11e6-82f6-9a2fff921b3f.png)
