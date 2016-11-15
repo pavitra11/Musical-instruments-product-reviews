@@ -1,10 +1,10 @@
-# musical-instruments-product-reviews
+# Musical Instruments Product Reviews
 
 The review file was 10,261 rows and 11 coloumns out of which the review text was the main corpus data and summary and over all rating were the additional attributees.
 The raw data was downloaded in JSON format and using python it was converted into CSV format and were uploaded into R.
 
 # Preprocessing the file
-# pre-processing:
+#pre-processing:
 reviews<- corpus(musicalinstrumets$reviewText,
                     docnames=musicalinstrumets$ID,
                     docvar=data.frame(summary=musicalinstrumets$summary,overall= musicalinstrumets$summary))
@@ -27,20 +27,20 @@ head(dfm.reviews)
 
 topfeatures<-topfeatures(dfm.reviews, n=50)
 topfeatures
-# compute the table of terms:
+#compute the table of terms:
 term.table <- table(unlist(reviewsclean))
 term.table <- sort(term.table, decreasing = TRUE)
-# read in some stopwords:
+#read in some stopwords:
 stop_words <- stopwords("SMART")
 stop_words <- c(stop_words, "can", "one", "will", "get", "just", "want","got", 
                 "even", "way", "even", "also","like","make","go")
 stop_words <- tolower(stop_words)
-# remove terms that are stop words or occur fewer than 5 times:
+#remove terms that are stop words or occur fewer than 5 times:
 del <- names(term.table) %in% stop_words | term.table < 5
 term.table <- term.table[!del]
 term.table <- term.table[names(term.table) != ""]
 vocab <- names(term.table)
-# now put the documents into the format required by the lda package:
+#now put the documents into the format required by the lda package:
 get.terms <- function(x) {
   index <- match(x, vocab)
   index <- index[!is.na(index)]
@@ -55,18 +55,18 @@ The dfm that was generated was as follows
 ![ScreenShot](https://cloud.githubusercontent.com/assets/22182351/20318609/e1a8f2d4-ab38-11e6-86eb-abba113b0f6c.png)
 
 Using the R package to fit the model
-# Compute some statistics related to the data set:
+#Compute some statistics related to the data set:
 D <- length(documents)  
 W <- length(vocab)  # number of terms in the vocab (5937)
 doc.length <- sapply(documents, function(x) sum(x[2, ]))  
 N <- sum(doc.length)  # total number of tokens in the data (322238L)
 term.frequency <- as.integer(term.table)
-# MCMC and model tuning parameters:
+#MCMC and model tuning parameters:
 K <- 15
 G <- 3000
 alpha <- 0.02
 eta <- 0.02
-# Fit the model:
+#Fit the model:
 library(lda)
 set.seed(357)
 t1 <- Sys.time()
@@ -75,7 +75,7 @@ fit <- lda.collapsed.gibbs.sampler(documents = documents, K = K, vocab = vocab,
                                    eta = eta, initial = NULL, burnin = 0,
                                    compute.log.likelihood = TRUE)
 t2 <- Sys.time()
-## display runtime
+#display runtime
 t2 - t1  
 #takes about 10 minutes to run it on an 8GB laptop
 
@@ -93,7 +93,7 @@ reviewdata <- list(phi = phi,
 
 library(LDAvis)
 library(servr)
-# Create JSON to feed the visualization
+#Create JSON to feed the visualization
 json <- createJSON(phi = reviewdata$phi, 
                    theta = reviewdata$theta, 
                    doc.length = reviewdata$doc.length, 
