@@ -20,7 +20,7 @@ Visualizing the fit model
 ![ScreenShot](https://cloud.githubusercontent.com/assets/22182351/20323021/2e459326-ab49-11e6-9a89-5ff25863a457.png)
 
 Given below is a screen shot for the the ineractive topic modelling for the amazon reviews for various musical instruments.
-![ScreenShot](https://cloud.githubusercontent.com/assets/22182351/20316792/722da244-ab31-11e6-82f6-9a2fff921b3f.png)
+![ScreenShot](https://cloud.githubusercontent.com/assets/22182351/20323150/a17ed622-ab49-11e6-9f5a-b81617e46424.png)
 
 For instance, in the topic modelling, for topic 2 at a relavance metric of o.49 the top words in the topic are pedal, distortion, delay, boss, tone, boost, effect, overdrive etc. 
 These words feature in other topics like, 1, 9, 8, 15, 3, 5 etc.
