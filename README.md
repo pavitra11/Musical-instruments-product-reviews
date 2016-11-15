@@ -80,7 +80,7 @@ t2 - t1
 #takes about 10 minutes to run it on an 8GB laptop
 
 # Visualizing the fit model
-We set up a topic model with 20 topics, relatively diffuse priors for the topic-term distributions (η= 0.02) and document-topic distributions (α= 0.02), and we set the collapsed Gibbs sampler to run for 5,000 iterations. We notice that it takes about 10 minuted for the model to run on an 8 GB laptop.
+We set up a topic model with 15 topics, relatively diffuse priors for the topic-term distributions (η= 0.02) and document-topic distributions (α= 0.02), and we set the collapsed Gibbs sampler to run for 5,000 iterations. We notice that it takes about 10 minuted for the model to run on an 8 GB laptop.
 
 theta <- t(apply(fit$document_sums + alpha, 2, function(x) x/sum(x)))
 phi <- t(apply(t(fit$topics) + eta, 2, function(x) x/sum(x)))
