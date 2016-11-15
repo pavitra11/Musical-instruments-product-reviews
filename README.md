@@ -22,9 +22,11 @@ Visualizing the fit model
 Given below is a screen shot for the the ineractive topic modelling for the amazon reviews for various musical instruments.
 ![ScreenShot](https://cloud.githubusercontent.com/assets/22182351/20323150/a17ed622-ab49-11e6-9f5a-b81617e46424.png)
 
-For instance, in the topic modelling, for topic 2 at a relavance metric of o.49 the top words in the topic are pedal, distortion, delay, boss, tone, boost, effect, overdrive etc. 
-These words feature in other topics like, 1, 9, 8, 15, 3, 5 etc.
-Pedal has featured approximately 2,500 times and 2100 times in topic 2 itself.
+For instance, in the topic modelling, for topic 15 at a relavance metric of 0.5 the top words in the topic are cloth, ploish, cleaning, dry, humidity etc. 
+For instance the word cloth also features in topic 1 and 13
+cloth has featured approximately 150 times and 100 times in topic 15 itself.
+
+We can also 
 
 The below URL link shows the interactive topic modelling for this particular data set.
 
