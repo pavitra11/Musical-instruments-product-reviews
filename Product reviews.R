@@ -56,10 +56,10 @@ get.terms <- function(x) {
 }
 documents <- lapply(reviewsclean, get.terms)
 
-D <- length(documents)  # number of documents (1)
-W <- length(vocab)  # number of terms in the vocab (1741)
-doc.length <- sapply(documents, function(x) sum(x[2, ]))  # number of tokens per document [312, 288, 170, 436, 291, ...]
-N <- sum(doc.length)  # total number of tokens in the data (56196)
+D <- length(documents) 
+W <- length(vocab)  
+doc.length <- sapply(documents, function(x) sum(x[2, ]))  
+N <- sum(doc.length)  
 term.frequency <- as.integer(term.table)
 
 K <- 15
